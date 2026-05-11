@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern Restaurant | Ambalantota</title>
+    <meta name="description" content="Southern Restaurant Ambalantota - Fresh Southern Taste. Take Away Available.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">
+            <div class="loading-circle">
+                <span>SOUTHERN</span>
+                <span>RESTAURANT</span>
+                <div class="loading-line"></div>
+                <small>AMBALANTOTA</small>
+            </div>
+        </div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo logo-block">
+                <span class="logo-line-1">SOUTHERN</span>
+                <span class="logo-line-2" id="restaurantText"></span>
+                <span class="logo-divider"></span>
+                <span class="logo-line-3">AMBALANTOTA</span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-pattern"></div>
+        <div class="floating-icons">
+            <i class="fas fa-utensils float-icon" style="--delay:0s;--duration:6s;top:15%;left:10%"></i>
+            <i class="fas fa-fish float-icon" style="--delay:1s;--duration:7s;top:20%;right:15%"></i>
+            <i class="fas fa-drumstick-bite float-icon" style="--delay:2s;--duration:5s;bottom:25%;left:8%"></i>
+            <i class="fas fa-carrot float-icon" style="--delay:0.5s;--duration:8s;bottom:20%;right:10%"></i>
+            <i class="fas fa-pepper-hot float-icon" style="--delay:1.5s;--duration:6s;top:60%;left:15%"></i>
+            <i class="fas fa-lemon float-icon" style="--delay:2.5s;--duration:7s;top:10%;left:50%"></i>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title"><span class="southern-word">SOUTHERN</span> <span class="restaurant-word">RESTAURANT</span></h1>
+                <div class="typewriter">
+                    <i class="typewriter-icon fas fa-utensils" id="typewriterIcon"></i>
+                    <span id="typewriterText"></span>
+                </div>
+                <p class="hero-subtitle">Authentic Southern flavors delivered to your table</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary ripple-btn">
+                        <i class="fas fa-shopping-bag"></i> Order Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Our Story</span>
+                <h2 class="section-title">Taste the Tradition</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image scroll-reveal">
+                    <div class="image-frame">
+                        <div class="image-reveal"></div>
+                        <div class="image-placeholder">
+                            <i class="fas fa-utensils"></i>
+                            <span>Southern Restaurant Interior</span>
+                        </div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">15+</span>
+                        <span class="exp-text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+
+                <div class="about-content scroll-reveal">
+                    <h3>The Heart of Southern Hospitality</h3>
+                    <p>Located in the heart of Ambalantota, Southern Restaurant has been serving authentic Southern Sri Lankan cuisine since 2009. Our recipes have been passed down through generations, bringing you the true taste of the South.</p>
+                    <p>From our signature Kottu to freshly caught seafood, every dish is prepared with locally sourced ingredients and traditional spices. Whether you dine in or take away, we promise a culinary experience that feels like home.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Fresh Ingredients</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Traditional Recipes</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Quick Service</span>
+                        </div>
+                    </div>
+
+                    <a href="#menu" class="btn btn-primary ripple-btn">Explore Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats section-padding-sm">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card scroll-reveal" data-target="15">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3 class="counter" data-target="15">0</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-card scroll-reveal" data-target="50000">
+                    <i class="fas fa-smile"></i>
+                    <h3 class="counter" data-target="50000">0</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-card scroll-reveal" data-target="120">
+                    <i class="fas fa-hamburger"></i>
+                    <h3 class="counter" data-target="120">0</h3>
+                    <p>Menu Items</p>
+                </div>
+                <div class="stat-card scroll-reveal" data-target="25">
+                    <i class="fas fa-award"></i>
+                    <h3 class="counter" data-target="25">0</h3>
+                    <p>Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Categories & Menu -->
+    <section class="menu-section section-padding" id="menu">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Our Menu</span>
+                <h2 class="section-title">Southern Delicacies</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="category-filters scroll-reveal">
+                <button class="category-btn active" data-category="all">
+                    <span>All Items</span>
+                </button>
+                <button class="category-btn" data-category="rice-curry">
+                    <span>Rice & Curry</span>
+                </button>
+                <button class="category-btn" data-category="fried-rice">
+                    <span>Fried Rice</span>
+                </button>
+                <button class="category-btn" data-category="kottu">
+                    <span>Kottu</span>
+                </button>
+                <button class="category-btn" data-category="noodles">
+                    <span>Noodles</span>
+                </button>
+                <button class="category-btn" data-category="biryani">
+                    <span>Biryani</span>
+                </button>
+                <button class="category-btn" data-category="nasigoreng">
+                    <span>Nasigoreng</span>
+                </button>
+                <button class="category-btn" data-category="devilled">
+                    <span>Devilled & Sides</span>
+                </button>
+                <button class="category-btn" data-category="soups-salads">
+                    <span>Soups & Salads</span>
+                </button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu items injected via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Dishes Carousel -->
+    <section class="specials section-padding">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Chef's Choice</span>
+                <h2 class="section-title">Special Dishes</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="carousel-container scroll-reveal">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Slides injected via JS -->
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev" id="carouselPrev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="carousel-btn next" id="carouselNext"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section-padding" id="gallery">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Moments</span>
+                <h2 class="section-title">Food Gallery</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="gallery-masonry" id="galleryMasonry">
+                <!-- Gallery items injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="Gallery Image" id="lightboxImg">
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Reviews</span>
+                <h2 class="section-title">What Our Guests Say</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="testimonial-slider scroll-reveal">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <!-- Testimonials injected via JS -->
+                </div>
+                <div class="testimonial-dots" id="testimonialDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Visit Us</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-cards scroll-reveal">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Address</h3>
+                        <p>Southern Restaurant<br>Main Street, Ambalantota<br>Sri Lanka</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>0716 000 590<br>0472 268 162</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>info@southernrestaurant.lk<br>orders@southernrestaurant.lk</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Hours</h3>
+                        <p>Mon - Sun<br>10:00 AM - 10:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-map scroll-reveal">
+                    <iframe 
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=81.0%2C6.08%2C81.04%2C6.12&layer=mapnik&marker=6.10%2C81.02" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 20px; filter: grayscale(0.2) contrast(1.1);" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="Southern Restaurant Location">
+                    </iframe>
+                    <div class="map-overlay">
+                        <i class="fas fa-map-pin"></i>
+                        <span>Ambalantota</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-links scroll-reveal">
+                <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-link" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand scroll-reveal">
+                        <div class="footer-logo logo-block">
+                            <span class="logo-line-1">SOUTHERN</span>
+                            <span class="logo-line-2">RESTAURANT</span>
+                            <span class="logo-divider"></span>
+                            <span class="logo-line-3">AMBALANTOTA</span>
+                        </div>
+                        <p>Authentic Southern flavors served with tradition and love since 2009.</p>
+                    </div>
+
+                    <div class="footer-links scroll-reveal">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#menu">Our Menu</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact scroll-reveal">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Main Street, Ambalantota</li>
+                            <li><i class="fas fa-phone"></i> 0716 000 590</li>
+                            <li><i class="fas fa-phone"></i> 0472 268 162</li>
+                            <li><i class="fas fa-envelope"></i> info@southernrestaurant.lk</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-hours scroll-reveal">
+                        <h4>Opening Hours</h4>
+                        <ul>
+                            <li><span>Monday - Friday</span> <span>10:00 - 22:00</span></li>
+                            <li><span>Saturday</span> <span>10:00 - 23:00</span></li>
+                            <li><span>Sunday</span> <span>10:00 - 22:00</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Southern Restaurant Ambalantota. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
