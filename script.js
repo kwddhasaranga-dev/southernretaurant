@@ -13,8 +13,52 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
         setTimeout(() => {
             loadingScreen.classList.add('hidden');
-        }, 1500);
+            
+            // Show notice popup 1 second after loading screen hides
+            setTimeout(() => {
+                showNoticePopup();
+            }, 1000);
+        }, 3000);
     });
+
+    // ==========================================
+    // NOTICE POPUP
+    // ==========================================
+    function showNoticePopup() {
+        const popup = document.getElementById('noticePopup');
+        const closeBtn = document.getElementById('noticeClose');
+        
+        if (!popup || !closeBtn) {
+            return;
+        }
+        
+        // Show popup without session storage check (show every time)
+        popup.classList.add('show');
+        popup.style.display = 'flex';
+        
+        // Close popup function
+        const closePopup = () => {
+            popup.classList.remove('show');
+            popup.style.display = 'none';
+        };
+        
+        // Close on button click
+        closeBtn.addEventListener('click', closePopup);
+        
+        // Close on backdrop click
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup || e.target.classList.contains('notice-backdrop')) {
+                closePopup();
+            }
+        });
+        
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && popup.classList.contains('show')) {
+                closePopup();
+            }
+        });
+    }
 
     // ==========================================
     // DATA
@@ -65,12 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 28, name: "Devilled Cuttlefish", category: "devilled", price: "850", rating: 5, desc: "Tender cuttlefish with devilled spice coating.", img: "images/Devilled Cuttlefish.jpg" },
         { id: 29, name: "Devilled Prawns", category: "devilled", price: "950", rating: 5, desc: "Large prawns prepared devilled with heat and flavor.", img: "images/Devilled Prawns.jpg" },
         { id: 30, name: "Hot Butter Cuttlefish", category: "devilled", price: "900", rating: 5, desc: "Cuttlefish in creamy hot butter sauce with spices.", img: "images/Hot Butter Cuttlefish.jpg" },
-
-        // Soups & Salads
-        { id: 31, name: "Vegetable Soup", category: "soups-salads", price: "350", rating: 4, desc: "Fresh vegetable broth with seasonal vegetables.", img: "https://images.unsplash.com/photo-1498812993189-0b64f4f608ad?auto=format&fit=crop&w=800&q=80" },
-        { id: 32, name: "Chicken Soup", category: "soups-salads", price: "400", rating: 4, desc: "Warm chicken soup with herbs and vegetables.", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" },
-        { id: 33, name: "Mixed Seafood Soup", category: "soups-salads", price: "500", rating: 5, desc: "Rich seafood broth with shrimp, squid, and fish.", img: "https://images.unsplash.com/photo-1514516882924-2a51a0f8c8df?auto=format&fit=crop&w=800&q=80" },
-        { id: 34, name: "Fresh Garden Salad", category: "soups-salads", price: "400", rating: 4, desc: "Crisp fresh vegetables with house dressing.", img: "https://images.unsplash.com/photo-1506808547685-e2ba962ded58?auto=format&fit=crop&w=800&q=80" },
 
         // Appetizers / Short Eats
         { id: 35, name: "French Fries", category: "appetizers", price: "300", rating: 4, desc: "Golden crispy French fries with seasoning.", img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=800&q=80" },
@@ -324,6 +362,35 @@ const galleryItems = [
         return num;
     }
 
+    // අකුරු ඇනිමේට් කිරීමේ ශ්‍රිතය (Z to A)
+    function animateLetters(element) {
+        const letters = "ZYXWVUTSRQPONMLKJIHGFEDCBA";
+        const target = element.getAttribute('data-target');
+        let i = 0;
+        
+        const letterTimer = setInterval(() => {
+            element.innerText = letters[i];
+            if (letters[i] === target) {
+                clearInterval(letterTimer);
+            }
+            i++;
+            // අකුරු වේගයෙන් මාරු වීමට කාලය 80ms ලෙස සකසා ඇත
+        }, 80);
+    }
+
+    // Intersection Observer එකට අකුරු ඇනිමේෂන් එක සම්බන්ධ කිරීම
+    const letterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateLetters(entry.target);
+                letterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    // letter-animate class එක ඇති අයිතම නිරීක්ෂණය කිරීම
+    document.querySelectorAll('.letter-animate').forEach(el => letterObserver.observe(el));
+
     // ==========================================
     // MENU RENDERING & FILTERING WITH AUTO-ROTATION
     // ==========================================
@@ -333,7 +400,7 @@ const galleryItems = [
     let currentCategory = 'all';
 
     // Define categories that have visible filter buttons in the UI
-    const activeCategories = ['rice-curry', 'fried-rice', 'kottu', 'noodles', 'biryani', 'nasigoreng', 'devilled', 'soups-salads'];
+    const activeCategories = ['rice-curry', 'fried-rice', 'kottu', 'noodles', 'biryani', 'nasigoreng', 'devilled'];
 
     // Get unique categories for variety picking (only from active categories)
     function getUniqueCategoriesForRotation() {
@@ -415,7 +482,6 @@ const galleryItems = [
                     'biryani': 'fa-crown',
                     'nasigoreng': 'fa-wok',
                     'devilled': 'fa-pepper-hot',
-                    'soups-salads': 'fa-soup',
                     'appetizers': 'fa-apple-alt',
                     'desserts': 'fa-ice-cream',
                     'beverages': 'fa-cup'
