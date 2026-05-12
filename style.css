@@ -3132,3 +3132,54 @@ body:hover .cursor-glow {
         font-size: 1rem;
     }
 }
+
+/* --- Our Heritage (About Section) Mobile List Fix --- */
+
+/* Desktop එකේදී පෙනුම */
+#about .about-features {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Mobile (පොඩි screen) සඳහා පමණි */
+@media (max-width: 768px) {
+    #about .about-features {
+        flex-direction: column !important; /* එකක් යට එකක් වැටීමට */
+        align-items: flex-start !important;
+        gap: 20px !important;
+        padding-left: 15px; 
+        margin-top: 25px;
+        overflow: visible; /* Scrollbar එකක් එනවා නම් ඒක අයින් කරන්න */
+    }
+
+    #about .feature-item {
+        flex-direction: row !important; /* අයිකනය වමේ - අකුරු දකුණේ */
+        justify-content: flex-start !important;
+        text-align: left !important;
+        gap: 15px !important;
+        width: 100%;
+        min-width: auto !important; /* කලින් තිබුණ සීමාවන් අයින් කිරීමට */
+    }
+
+    #about .feature-item i {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px; /* අයිකනය හැකිලීම වැළැක්වීමට */
+        font-size: 1.1rem !important;
+        margin-bottom: 0 !important;
+        border-radius: 50% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #about .feature-item span {
+        font-size: 13px !important; 
+        font-weight: 600;
+        color: #2c1810;
+        white-space: normal !important; /* අකුරු ගොඩක් දිග නම් පේළි දෙකකට කැඩෙන්න ඉඩ දෙන්න */
+        line-height: 1.3;
+    }
+}
