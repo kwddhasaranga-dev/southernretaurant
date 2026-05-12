@@ -23,48 +23,48 @@ document.addEventListener('DOMContentLoaded', () => {
     // Menu Items - Comprehensive Restaurant Menu
     const menuItems = [
         // Rice & Curry - Authentic Sri Lankan
-        { id: 1, name: "Vegetable Rice & Curry", category: "rice-curry", price: "550", rating: 4, desc: "Traditionally spiced rice with 5 vegetable sides and authentic Sri Lankan curry.", img: "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=800&q=80" },
-        { id: 2, name: "Egg Rice & Curry", category: "rice-curry", price: "600", rating: 4, desc: "Aromatic rice with fried eggs and savory curry gravy.", img: "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80" },
-        { id: 3, name: "Fish Rice & Curry", category: "rice-curry", price: "750", rating: 5, desc: "Fresh fish curry served with fragrant basmati rice.", img: "https://images.unsplash.com/photo-1514516882924-2a51a0f8c8df?auto=format&fit=crop&w=800&q=80" },
-        { id: 4, name: "Chicken Rice & Curry", category: "rice-curry", price: "700", rating: 5, desc: "Tender chicken in spiced curry gravy with rice and vegetable sides.", img: "https://images.unsplash.com/photo-1523986371872-9d3ba2e2fefa?auto=format&fit=crop&w=800&q=80" },
+        { id: 1, name: "Vegetable Rice & Curry", category: "rice-curry", price: "550", rating: 4, desc: "Traditionally spiced rice with 5 vegetable sides and authentic Sri Lankan curry.", img: "images/vegetable%20rice%20%26%20curry.jpg" },
+        { id: 2, name: "Egg Rice & Curry", category: "rice-curry", price: "600", rating: 4, desc: "Aromatic rice with fried eggs and savory curry gravy.", img: "images/egg%20rice%20%26%20curry.jpg" },
+        { id: 3, name: "Fish Rice & Curry", category: "rice-curry", price: "750", rating: 5, desc: "Fresh fish curry served with fragrant basmati rice.", img: "images/fish%20rice%20%26%20curry.jpg" },
+        { id: 4, name: "Chicken Rice & Curry", category: "rice-curry", price: "700", rating: 5, desc: "Tender chicken in spiced curry gravy with rice and vegetable sides.", img: "images/chicken%20rice%20%26%20curry.jpg" },
 
         // Fried Rice
-        { id: 5, name: "Vegetable Fried Rice", category: "fried-rice", price: "550", rating: 4, desc: "Stir-fried rice with colorful seasonal vegetables and aromatic spices.", img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" },
-        { id: 6, name: "Egg Fried Rice", category: "fried-rice", price: "600", rating: 4, desc: "Classic fried rice with scrambled eggs and spring onions.", img: "https://images.unsplash.com/photo-1604908177522-7635b832d664?auto=format&fit=crop&w=800&q=80" },
-        { id: 7, name: "Chicken Fried Rice", category: "fried-rice", price: "700", rating: 5, desc: "Tender chicken pieces stir-fried with rice and fresh vegetables.", img: "https://images.unsplash.com/photo-1513623954574-3f3f0de91d73?auto=format&fit=crop&w=800&q=80" },
-        { id: 8, name: "Seafood Fried Rice", category: "fried-rice", price: "850", rating: 5, desc: "Premium fried rice with shrimp, squid, and fresh seafood.", img: "https://images.unsplash.com/photo-1562967916-eb82221dfb30?auto=format&fit=crop&w=800&q=80" },
-        { id: 9, name: "Mixed Fried Rice", category: "fried-rice", price: "750", rating: 5, desc: "Combination of chicken, seafood, and vegetables with fried rice.", img: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" },
+        { id: 5, name: "Vegetable Fried Rice", category: "fried-rice", price: "550", rating: 4, desc: "Stir-fried rice with colorful seasonal vegetables and aromatic spices.", img: "images/vegetable%20fried%20rice.jpg" },
+        { id: 6, name: "Egg Fried Rice", category: "fried-rice", price: "600", rating: 4, desc: "Classic fried rice with scrambled eggs and spring onions.", img: "images/egg%20fried%20rice.jpg" },
+        { id: 7, name: "Chicken Fried Rice", category: "fried-rice", price: "700", rating: 5, desc: "Tender chicken pieces stir-fried with rice and fresh vegetables.", img: "images/chicken%20fried%20rice.jpg" },
+        { id: 8, name: "Seafood Fried Rice", category: "fried-rice", price: "850", rating: 5, desc: "Premium fried rice with shrimp, squid, and fresh seafood.", img: "images/seafood%20fried%20rice.jpg" },
+        { id: 9, name: "Mixed Fried Rice", category: "fried-rice", price: "750", rating: 5, desc: "Combination of chicken, seafood, and vegetables with fried rice.", img: "images/mixed%20fried%20rice.jpg" },
 
         // Kottu
-        { id: 10, name: "Vegetable Kottu", category: "kottu", price: "550", rating: 4, desc: "Chopped roti stir-fried with fresh vegetables and aromatic spices.", img: "images/vegetable kotthu.jpg" },
-        { id: 11, name: "Egg Kottu", category: "kottu", price: "600", rating: 4, desc: "Chopped roti with fried eggs and onions, served hot.", img: "images/chiken kotthu.jpg" },
-        { id: 12, name: "Chicken Kottu", category: "kottu", price: "750", rating: 5, desc: "Sri Lanka's favorite chopped roti with tender chicken pieces.", img: "images/chiken kotthu.jpg" },
-        { id: 13, name: "Seafood Kottu", category: "kottu", price: "950", rating: 5, desc: "Premium kottu with fresh shrimp, squid, and fish.", img: "images/chiken kotthu.jpg" },
-        { id: 14, name: "Mixed Kottu", category: "kottu", price: "850", rating: 5, desc: "Combination of chicken, seafood, and vegetables with chopped roti.", img: "images/chiken kotthu.jpg" },
-        { id: 15, name: "Cheese Kottu", category: "kottu", price: "800", rating: 4, desc: "Chopped roti with melted cheese, chicken, and spiced vegetables.", img: "images/chiken kotthu.jpg" },
+        { id: 10, name: "Vegetable Kottu", category: "kottu", price: "550", rating: 4, desc: "Chopped roti stir-fried with fresh vegetables and aromatic spices.", img: "images/vegetable%20kottu.jpg" },
+        { id: 11, name: "Egg Kottu", category: "kottu", price: "600", rating: 4, desc: "Chopped roti with fried eggs and onions, served hot.", img: "images/egg%20kottu.jpg" },
+        { id: 12, name: "Chicken Kottu", category: "kottu", price: "750", rating: 5, desc: "Sri Lanka's favorite chopped roti with tender chicken pieces.", img: "images/chicken%20kottu.jpg" },
+        { id: 13, name: "Seafood Kottu", category: "kottu", price: "950", rating: 5, desc: "Premium kottu with fresh shrimp, squid, and fish.", img: "images/seafood%20kottu.jpg" },
+        { id: 14, name: "Mixed Kottu", category: "kottu", price: "850", rating: 5, desc: "Combination of chicken, seafood, and vegetables with chopped roti.", img: "images/mixed%20kottu.jpg" },
+        { id: 15, name: "Cheese Kottu", category: "kottu", price: "800", rating: 4, desc: "Chopped roti with melted cheese, chicken, and spiced vegetables.", img: "images/cheese%20kottu.jpg" },
 
         // Noodles
-        { id: 16, name: "Vegetable Noodles", category: "noodles", price: "550", rating: 4, desc: "Stir-fried noodles with seasonal vegetables and aromatic sauce.", img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" },
-        { id: 17, name: "Egg Noodles", category: "noodles", price: "600", rating: 4, desc: "Soft noodles with fried eggs and spring onions.", img: "https://images.unsplash.com/photo-1562967916-eb82221dfb30?auto=format&fit=crop&w=800&q=80" },
-        { id: 18, name: "Chicken Noodles", category: "noodles", price: "700", rating: 5, desc: "Tender chicken stir-fried with noodles and fresh vegetables.", img: "https://images.unsplash.com/photo-1513623954574-3f3f0de91d73?auto=format&fit=crop&w=800&q=80" },
-        { id: 19, name: "Seafood Noodles", category: "noodles", price: "850", rating: 5, desc: "Premium noodles with shrimp, squid, and fresh seafood.", img: "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=800&q=80" },
-        { id: 20, name: "Mixed Noodles", category: "noodles", price: "750", rating: 5, desc: "Combination of chicken and seafood stir-fried with noodles.", img: "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80" },
+        { id: 16, name: "Vegetable Noodles", category: "noodles", price: "550", rating: 4, desc: "Stir-fried noodles with seasonal vegetables and aromatic sauce.", img: "images/vegetable noodles.jpg" },
+        { id: 17, name: "Egg Noodles", category: "noodles", price: "600", rating: 4, desc: "Soft noodles with fried eggs and spring onions.", img: "images/egg noodels.jpg" },
+        { id: 18, name: "Chicken Noodles", category: "noodles", price: "700", rating: 5, desc: "Tender chicken stir-fried with noodles and fresh vegetables.", img: "images/chiken noodels.jpg" },
+        { id: 19, name: "Seafood Noodles", category: "noodles", price: "850", rating: 5, desc: "Premium noodles with shrimp, squid, and fresh seafood.", img: "images/seafood noodles.jpg" },
+        { id: 20, name: "Mixed Noodles", category: "noodles", price: "750", rating: 5, desc: "Combination of chicken and seafood stir-fried with noodles.", img: "images/miixed noodels.jpg" },
 
         // Biryani
-        { id: 21, name: "Chicken Biryani", category: "biryani", price: "850", rating: 5, desc: "Fragrant basmati rice layered with tender spiced chicken and aromatics.", img: "images/chiken biriyani.jpg" },
-        { id: 22, name: "Seafood Biryani", category: "biryani", price: "950", rating: 5, desc: "Premium biryani with shrimp, squid, and fresh seafood.", img: "images/chiken biriyani.jpg" },
+        { id: 21, name: "Chicken Biryani", category: "biryani", price: "850", rating: 5, desc: "Fragrant basmati rice layered with tender spiced chicken and aromatics.", img: "images/chicken%20biryani.jpg" },
+        { id: 22, name: "Seafood Biryani", category: "biryani", price: "950", rating: 5, desc: "Premium biryani with shrimp, squid, and fresh seafood.", img: "images/chicken%20biryani.jpg" },
 
         // Nasigoreng
-        { id: 23, name: "Chicken Nasigoreng", category: "nasigoreng", price: "750", rating: 5, desc: "Indonesian-style fried rice with chicken and spiced tomato paste.", img: "https://images.unsplash.com/photo-1562967916-eb82221dfb30?auto=format&fit=crop&w=800&q=80" },
-        { id: 24, name: "Seafood Nasigoreng", category: "nasigoreng", price: "900", rating: 5, desc: "Premium nasigoreng with fresh shrimp, squid, and seafood.", img: "https://images.unsplash.com/photo-1513623954574-3f3f0de91d73?auto=format&fit=crop&w=800&q=80" },
-        { id: 25, name: "Mixed Nasigoreng", category: "nasigoreng", price: "850", rating: 5, desc: "Combination of chicken and seafood nasigoreng.", img: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" },
+        { id: 23, name: "Chicken Nasigoreng", category: "nasigoreng", price: "750", rating: 5, desc: "Indonesian-style fried rice with chicken and spiced tomato paste.", img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80" },
+        { id: 24, name: "Seafood Nasigoreng", category: "nasigoreng", price: "900", rating: 5, desc: "Premium nasigoreng with fresh shrimp, squid, and seafood.", img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80" },
+        { id: 25, name: "Mixed Nasigoreng", category: "nasigoreng", price: "850", rating: 5, desc: "Combination of chicken and seafood nasigoreng.", img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80" },
 
         // Devilled & Sides
-        { id: 26, name: "Devilled Chicken", category: "devilled", price: "750", rating: 5, desc: "Spicy devilled chicken pieces with crispy exterior.", img: "https://images.unsplash.com/photo-1523986371872-9d3ba2e2fefa?auto=format&fit=crop&w=800&q=80" },
-        { id: 27, name: "Devilled Fish", category: "devilled", price: "800", rating: 5, desc: "Fresh fish prepared devilled style with spices.", img: "https://images.unsplash.com/photo-1514516882924-2a51a0f8c8df?auto=format&fit=crop&w=800&q=80" },
-        { id: 28, name: "Devilled Cuttlefish", category: "devilled", price: "850", rating: 5, desc: "Tender cuttlefish with devilled spice coating.", img: "https://images.unsplash.com/photo-1567337710282-00832b415979?auto=format&fit=crop&w=800&q=80" },
-        { id: 29, name: "Devilled Prawns", category: "devilled", price: "950", rating: 5, desc: "Large prawns prepared devilled with heat and flavor.", img: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" },
-        { id: 30, name: "Hot Butter Cuttlefish", category: "devilled", price: "900", rating: 5, desc: "Cuttlefish in creamy hot butter sauce with spices.", img: "https://images.unsplash.com/photo-1604908177522-7635b832d664?auto=format&fit=crop&w=800&q=80" },
+        { id: 26, name: "Devilled Chicken", category: "devilled", price: "750", rating: 5, desc: "Spicy devilled chicken pieces with crispy exterior.", img: "images/Devilled chicken.jpg" },
+        { id: 27, name: "Devilled Fish", category: "devilled", price: "800", rating: 5, desc: "Fresh fish prepared devilled style with spices.", img: "images/Devilled fish.jpg" },
+        { id: 28, name: "Devilled Cuttlefish", category: "devilled", price: "850", rating: 5, desc: "Tender cuttlefish with devilled spice coating.", img: "images/Devilled Cuttlefish.jpg" },
+        { id: 29, name: "Devilled Prawns", category: "devilled", price: "950", rating: 5, desc: "Large prawns prepared devilled with heat and flavor.", img: "images/Devilled Prawns.jpg" },
+        { id: 30, name: "Hot Butter Cuttlefish", category: "devilled", price: "900", rating: 5, desc: "Cuttlefish in creamy hot butter sauce with spices.", img: "images/Hot Butter Cuttlefish.jpg" },
 
         // Soups & Salads
         { id: 31, name: "Vegetable Soup", category: "soups-salads", price: "350", rating: 4, desc: "Fresh vegetable broth with seasonal vegetables.", img: "https://images.unsplash.com/photo-1498812993189-0b64f4f608ad?auto=format&fit=crop&w=800&q=80" },
@@ -92,9 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
    const specialDishes = [
-    { name: "Chicken Biryani", desc: "Chef's special fragrant spiced rice.", price: "850", icon: "fa-drumstick-bite" },
-    { name: "Special Seafood Kottu", desc: "Freshly made with morning catch.", price: "1100", icon: "fa-fish" },
-    { name: "Vegetable Noodles", desc: "Healthy and delicious garden fresh.", price: "550", icon: "fa-leaf" }
+    { name: "Chicken Biryani", desc: "Chef's special fragrant spiced rice.", price: "850", img: "images/chicken biryani.jpg" },
+    { name: "Special Seafood Kottu", desc: "Freshly made with morning catch.", price: "1100", img: "images/seafood kottu.jpg" },
+    { name: "Vegetable Noodles", desc: "Healthy and delicious garden fresh.", price: "550", img: "images/vegetable noodles.jpg" }
 ];
 
 const galleryItems = [
@@ -325,57 +325,147 @@ const galleryItems = [
     }
 
     // ==========================================
-    // MENU RENDERING & FILTERING
+    // MENU RENDERING & FILTERING WITH AUTO-ROTATION
     // ==========================================
     const menuGrid = document.getElementById('menuGrid');
     const categoryBtns = document.querySelectorAll('.category-btn');
+    let menuRotationInterval = null;
+    let currentCategory = 'all';
 
+    // Define categories that have visible filter buttons in the UI
+    const activeCategories = ['rice-curry', 'fried-rice', 'kottu', 'noodles', 'biryani', 'nasigoreng', 'devilled', 'soups-salads'];
+
+    // Get unique categories for variety picking (only from active categories)
+    function getUniqueCategoriesForRotation() {
+        const categories = [...new Set(menuItems.map(item => item.category))];
+        return categories.filter(category => activeCategories.includes(category));
+    }
+
+    // Pick 5 random items with variety (one from each of 5 different active categories if possible)
+    function getRandomMenuSelection() {
+        // First filter menuItems to only include items from active categories
+        const activeMenuItems = menuItems.filter(item => activeCategories.includes(item.category));
+        
+        const allCategories = getUniqueCategoriesForRotation();
+        const selected = [];
+        const usedCategories = new Set();
+
+        // Try to pick one item from 5 different categories
+        const targetCategories = Math.min(5, allCategories.length);
+        
+        for (let i = 0; i < targetCategories; i++) {
+            let category;
+            let attempts = 0;
+            
+            // Pick a unique category
+            do {
+                category = allCategories[Math.floor(Math.random() * allCategories.length)];
+                attempts++;
+            } while (usedCategories.has(category) && attempts < 10);
+            
+            if (!usedCategories.has(category)) {
+                usedCategories.add(category);
+                
+                // Get all items in this category (from active items only)
+                const itemsInCategory = activeMenuItems.filter(item => item.category === category);
+                
+                // Pick a random item from this category
+                if (itemsInCategory.length > 0) {
+                    const randomItem = itemsInCategory[Math.floor(Math.random() * itemsInCategory.length)];
+                    selected.push(randomItem);
+                }
+            }
+        }
+
+        // If we don't have 5 items yet, fill with random items from active categories
+        while (selected.length < 5) {
+            const randomItem = activeMenuItems[Math.floor(Math.random() * activeMenuItems.length)];
+            if (!selected.some(item => item.id === randomItem.id)) {
+                selected.push(randomItem);
+            }
+        }
+
+        return selected;
+    }
+
+    // Render menu with fade animation
     function renderMenu(category = 'all') {
-    menuGrid.innerHTML = '';
-    const filtered = category === 'all' ? menuItems : menuItems.filter(item => item.category === category);
-    
-    filtered.forEach((item, index) => {
-        const card = document.createElement('div');
-        card.className = 'menu-card';
+        const filtered = category === 'all' ? getRandomMenuSelection() : menuItems.filter(item => item.category === category);
         
-        // Map categories to icons for menu display
-        const categoryIconMap = {
-            'rice-curry': 'fa-bowl-rice',
-            'fried-rice': 'fa-fire',
-            'kottu': 'fa-blade',
-            'noodles': 'fa-noodles',
-            'biryani': 'fa-crown',
-            'nasigoreng': 'fa-wok',
-            'devilled': 'fa-pepper-hot',
-            'soups-salads': 'fa-soup',
-            'appetizers': 'fa-apple-alt',
-            'desserts': 'fa-ice-cream',
-            'beverages': 'fa-cup'
-        };
+        // Fade out current items
+        const currentCards = menuGrid.querySelectorAll('.menu-card');
+        currentCards.forEach(card => {
+            card.classList.remove('show');
+        });
+
+        // After fade out, render new items
+        setTimeout(() => {
+            menuGrid.innerHTML = '';
+            
+            filtered.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'menu-card';
+                
+                // Map categories to icons for menu display
+                const categoryIconMap = {
+                    'rice-curry': 'fa-bowl-rice',
+                    'fried-rice': 'fa-fire',
+                    'kottu': 'fa-blade',
+                    'noodles': 'fa-noodles',
+                    'biryani': 'fa-crown',
+                    'nasigoreng': 'fa-wok',
+                    'devilled': 'fa-pepper-hot',
+                    'soups-salads': 'fa-soup',
+                    'appetizers': 'fa-apple-alt',
+                    'desserts': 'fa-ice-cream',
+                    'beverages': 'fa-cup'
+                };
+                
+                const icon = categoryIconMap[item.category] || 'fa-utensils';
+                const imageHtml = item.img ? 
+                    `<img src="${item.img}" alt="${item.name}" style="width:100%; height:100%; object-fit:cover;">` :
+                    `<i class="fas ${icon}" style="font-size: 3rem; color: var(--gold);"></i>`;
+                
+                card.innerHTML = `
+                    <div class="menu-image">
+                        ${imageHtml}
+                        <span class="price-badge">Rs. ${item.price}</span>
+                    </div>
+                    <div class="menu-info">
+                        <h3>${item.name}</h3>
+                        <p>${item.desc}</p>
+                        <div class="menu-footer">
+                            <div class="rating">${generateStars(item.rating)}</div>
+                            <button class="add-to-cart"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                `;
+                menuGrid.appendChild(card);
+                
+                // Stagger the fade-in animation
+                setTimeout(() => card.classList.add('show'), 50 * (index + 1));
+            });
+        }, 300);
+    }
+
+    // Start auto-rotation for 'all' category
+    function startMenuRotation() {
+        if (menuRotationInterval) {
+            clearInterval(menuRotationInterval);
+        }
         
-        const icon = categoryIconMap[item.category] || 'fa-utensils';
-        const imageHtml = item.img ? 
-            `<img src="${item.img}" alt="${item.name}" style="width:100%; height:100%; object-fit:cover;">` :
-            `<i class="fas ${icon}" style="font-size: 3rem; color: var(--gold);"></i>`;
-        
-        card.innerHTML = `
-            <div class="menu-image">
-                ${imageHtml}
-                <span class="price-badge">Rs. ${item.price}</span>
-            </div>
-            <div class="menu-info">
-                <h3>${item.name}</h3>
-                <p>${item.desc}</p>
-                <div class="menu-footer">
-                    <div class="rating">${generateStars(item.rating)}</div>
-                    <button class="add-to-cart"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-        `;
-        menuGrid.appendChild(card);
-        setTimeout(() => card.classList.add('show'), 50);
-    });
-}
+        menuRotationInterval = setInterval(() => {
+            renderMenu('all');
+        }, 10000); // Increased from 6000ms to 10000ms for better readability
+    }
+
+    // Stop rotation when user selects a category
+    function stopMenuRotation() {
+        if (menuRotationInterval) {
+            clearInterval(menuRotationInterval);
+            menuRotationInterval = null;
+        }
+    }
 
     function generateStars(rating) {
         let stars = '';
@@ -390,12 +480,22 @@ const galleryItems = [
         btn.addEventListener('click', () => {
             categoryBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            renderMenu(btn.dataset.category);
+            
+            currentCategory = btn.dataset.category;
+            
+            if (currentCategory === 'all') {
+                renderMenu('all');
+                startMenuRotation();
+            } else {
+                stopMenuRotation();
+                renderMenu(currentCategory);
+            }
         });
     });
 
-    // Initial render
-    renderMenu();
+    // Initial render with auto-rotation
+    renderMenu('all');
+    startMenuRotation();
 
     // ==========================================
     // SPECIAL DISHES CAROUSEL
@@ -417,7 +517,7 @@ const galleryItems = [
         carouselTrack.innerHTML = allSlides.map(dish => `
             <div class="carousel-slide">
                 <div class="slide-image">
-                    <i class="fas ${dish.icon}"></i>
+                    <img src="${dish.img}" alt="${dish.name}" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
                 </div>
                 <div class="slide-content">
                     <h3>${dish.name}</h3>

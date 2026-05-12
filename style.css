@@ -148,8 +148,8 @@ img {
 }
 
 .loading-circle {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     border: 3px solid var(--primary-red);
     border-radius: 50%;
     display: flex;
@@ -522,7 +522,7 @@ body:hover .cursor-glow {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 28px;
 }
 
 .hero-title {
@@ -590,24 +590,28 @@ body:hover .cursor-glow {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 24px;
-    border: 1px solid rgba(255,255,255,0.18);
-    background: rgba(255,255,255,0.04);
-    border-radius: 999px;
-    max-width: 85%;
+    gap: 20px;
+    padding: 0;
+    max-width: fit-content;
+}
+
+.hero-subtitle-frame::before,
+.hero-subtitle-frame::after {
+    content: '';
+    width: 50px;
+    height: 0.5px;
+    background: rgba(212,175,55,0.85);
 }
 
 .hero-subtitle {
-    font-family: var(--font-body);
-    font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
     font-weight: 300;
-    font-style: italic;
-    color: #F9F1E9;
+    letter-spacing: 1.5px;
+    color: #ffffff;
     margin: 0;
-    line-height: 1.65;
-    max-width: 100%;
-    padding: 0 8px;
-    letter-spacing: 0.04em;
+    line-height: 1.3;
+    white-space: nowrap;
 }
 
 .hero-buttons {
@@ -995,15 +999,32 @@ body:hover .cursor-glow {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: var(--transition);
+    transition: opacity 0.3s ease, transform 0.5s ease;
     position: relative;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(30px) scale(0.95);
 }
 
 .menu-card.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    animation: menuCardIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes menuCardIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.menu-card:hover {
+    transform: translateY(-8px) scale(1);
+    box-shadow: var(--shadow-hover);
 }
 
 .menu-card:hover .menu-image img {
@@ -1831,6 +1852,10 @@ body:hover .cursor-glow {
         font-size: 2.2rem;
     }
 
+    .section-padding {
+        padding: 50px 20px;
+    }
+
     .nav-container {
         padding: 0 18px;
     }
@@ -1850,34 +1875,6 @@ body:hover .cursor-glow {
         z-index: 999;
     }
 
-    .hero-content {
-        padding: 40px 18px 30px;
-    }
-
-    .hero-text {
-        gap: 18px;
-    }
-
-    .hero-title {
-        font-size: clamp(1.8rem, 10vw, 3rem);
-        letter-spacing: 0.14rem;
-    }
-
-    .hero-subtitle-frame {
-        padding: 12px 18px;
-        max-width: 90%;
-    }
-
-    .hero-link {
-        padding: 16px 22px;
-        font-size: 0.95rem;
-        letter-spacing: 0.18em;
-    }
-
-    .floating-icons {
-        opacity: 0.08;
-    }
-    
     .nav-menu.active {
         right: 0;
     }
@@ -1898,80 +1895,120 @@ body:hover .cursor-glow {
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
-    
-    .hero {
-        height: 100vh;
-        background-attachment: scroll;
-        padding: 0;
+
+    /* Hero - Tablet */
+    .hero-content {
+        padding: 40px 18px 30px;
     }
 
-    .hero-content {
-        padding: 20px;
-        margin: 0;
+    .hero-text {
+        gap: 18px;
     }
 
     .hero-title {
-        font-size: clamp(2.2rem, 6vw, 3.8rem);
-        margin-bottom: 30px;
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        letter-spacing: 0.14rem;
     }
 
-    .typewriter {
-        font-size: clamp(1.5rem, 4.5vw, 2.6rem);
-        min-height: 55px;
-        margin-bottom: 35px;
+    .hero-subtitle-frame {
+        gap: 14px;
+        max-width: 95%;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
-        margin-bottom: 40px;
+        font-size: 18px;
     }
 
-    .hero-logo-circle {
-        width: 220px;
-        height: 220px;
+    .hero-subtitle-frame::before,
+    .hero-subtitle-frame::after {
+        width: 32px;
     }
 
-    .circle-inner h1 {
-        font-size: 1.5rem;
+    /* About - Tablet */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
-    
-    .carousel-slide {
-        min-width: 100%;
+
+    .about-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
     }
-    
-    .carousel-container {
-        padding: 0;
+
+    .about-features {
+        gap: 20px;
     }
-    
-    .gallery-masonry {
-        column-count: 1;
-    }
-    
+
+    /* Stats - Tablet */
     .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
-    
-    .footer-bottom .container {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+
+    /* Menu - Tablet */
+    .category-filters {
+        gap: 10px;
+        flex-wrap: wrap;
     }
-    
+
+    .category-btn {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    /* Carousel - Tablet */
+    .carousel-slide {
+        min-width: calc(100% - 20px);
+        border-radius: 15px;
+    }
+
+    .carousel-container {
+        padding: 0 20px;
+    }
+
+    /* Gallery - Tablet */
+    .gallery-masonry {
+        column-count: 2;
+        gap: 20px;
+    }
+
+    /* Contact - Tablet */
+    .contact-grid {
+        gap: 40px;
+    }
+
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .contact-map {
+        min-height: 350px;
+    }
+
+    /* Footer - Tablet */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .floating-icons {
+        opacity: 0.08;
+    }
+
     .cursor-glow {
         display: none;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-cards {
-        grid-template-columns: 1fr;
     }
 }
 
@@ -2076,10 +2113,24 @@ body:hover .cursor-glow {
     }
 
     .hero-subtitle {
-        font-size: 0.95rem;
+        font-size: 18px;
         margin: 0;
         padding: 0 15px;
-        line-height: 1.7;
+        line-height: 1.6;
+        letter-spacing: 1.2px;
+        white-space: normal;
+    }
+
+    .hero-subtitle-frame {
+        justify-content: center;
+        max-width: 100%;
+        gap: 16px;
+    }
+
+    .hero-subtitle-frame::before,
+    .hero-subtitle-frame::after {
+        width: 24px;
+        background: rgba(212,175,55,0.85);
     }
 
     .hero-buttons {
@@ -2124,5 +2175,518 @@ body:hover .cursor-glow {
 
     .floating-icons {
         opacity: 0.08;
+    }
+
+    /* Mobile - About Section */
+    .about-grid {
+        gap: 30px;
+    }
+
+    .about-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .about-features {
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .feature-item {
+        flex: 1;
+        min-width: 100px;
+        font-size: 0.85rem;
+    }
+
+    /* Mobile - Stats Section */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-card {
+        padding: 25px 15px;
+    }
+
+    .stat-card i {
+        font-size: 2rem;
+    }
+
+    .stat-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .stat-card p {
+        font-size: 0.85rem;
+    }
+
+    /* Mobile - Menu Section */
+    .category-filters {
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .category-btn {
+        padding: 10px 14px;
+        font-size: 0.8rem;
+        border-radius: 20px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .menu-card {
+        border-radius: 12px;
+    }
+
+    .menu-card-image {
+        height: 200px;
+    }
+
+    .menu-card-body {
+        padding: 15px;
+    }
+
+    .menu-card-title {
+        font-size: 1.2rem;
+    }
+
+    .menu-card-description {
+        font-size: 0.9rem;
+    }
+
+    .menu-card-price {
+        font-size: 1.3rem;
+    }
+
+    /* Mobile - Carousel */
+    .carousel-container {
+        padding: 15px 0;
+    }
+
+    .carousel-slide {
+        min-width: 100%;
+        border-radius: 12px;
+    }
+
+    .carousel-nav {
+        margin-top: 15px;
+    }
+
+    /* Mobile - Gallery */
+    .gallery-masonry {
+        column-count: 1;
+        gap: 15px;
+    }
+
+    .gallery-item {
+        margin-bottom: 0;
+        border-radius: 10px;
+    }
+
+    /* Mobile - Testimonials */
+    .testimonial-card {
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+    .testimonial-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .testimonial-author {
+        font-size: 1rem;
+    }
+
+    .testimonial-rating {
+        font-size: 1.2rem;
+    }
+
+    /* Mobile - Contact */
+    .contact-grid {
+        gap: 30px;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-card {
+        padding: 25px 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .contact-map {
+        min-height: 300px;
+        border-radius: 10px;
+    }
+
+    .social-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .social-link {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Mobile - Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-contact {
+        text-align: center;
+    }
+
+    .footer-contact ul {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Mobile - General */
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-padding {
+        padding: 40px 20px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+/* ============================================
+   DELIVERY SECTION
+   ============================================ */
+/* Premium Delivery Section */
+.delivery-section {
+    background-color: var(--light-beige);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 40px 0; /* Reduced padding for smaller background size */
+}
+
+.delivery-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.delivery-content {
+    text-align: left;
+}
+
+.delivery-desc {
+    margin: 25px 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    opacity: 0.85;
+    line-height: 1.8;
+}
+
+.delivery-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.d-feat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--dark-red);
+}
+
+.d-feat i {
+    color: var(--primary-red);
+    font-size: 1.1rem;
+}
+
+.delivery-cta {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.delivery-phone {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.delivery-phone:hover {
+    color: var(--primary-red);
+}
+
+.delivery-phone i {
+    color: var(--primary-red);
+}
+
+/* WhatsApp Button Default Style */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background-color: #25D366 !important; /* WhatsApp Green */
+    color: white !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Hover (Mouse එක උඩට ගිය විට) සහ Active (Touch කළ විට) රතු පාට වීම */
+.whatsapp-btn:hover, 
+.whatsapp-btn:active {
+    background-color: #B33A2E !important; /* ඔබේ රතු පාට */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(179, 58, 46, 0.4);
+}
+
+/* Animation Container Styling */
+.delivery-animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delivery-animation-container lottie-player {
+    height: 350px; /* Desktop height */
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .delivery-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .delivery-content {
+        order: 2;
+        text-align: center;
+    }
+    
+    .delivery-animation-container {
+        order: 1;
+    }
+    
+    .delivery-animation-container lottie-player {
+        height: 280px; /* Tablet height */
+    }
+    
+    .section-line {
+        margin: 0 auto !important;
+    }
+    
+    .delivery-features {
+        justify-content: center;
+    }
+    
+    .delivery-cta {
+        justify-content: center;
+    }
+}
+
+/* Delivery Responsive - Mobile */
+@media (max-width: 768px) {
+    .delivery-wrapper {
+        gap: 25px;
+    }
+    
+    .delivery-animation-container {
+        margin-bottom: 10px;
+    }
+    
+    .delivery-animation-container lottie-player {
+        width: 100% !important;
+        height: 250px !important; /* Mobile height */
+    }
+    
+    .delivery-desc {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+    
+    .delivery-features {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+    
+    .delivery-cta {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .whatsapp-btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 16px 32px;
+        font-size: 1.1rem;
+    }
+    
+    .delivery-phone {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .d-feat {
+        justify-content: center;
+        font-size: 0.85rem;
+    }
+    
+    .delivery-cta {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+    
+    .delivery-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .delivery-phone {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Delivery Responsive - Small Mobile */
+@media (max-width: 480px) {
+    .delivery-section {
+        padding: 30px 15px;
+    }
+    
+    .delivery-wrapper {
+        gap: 20px;
+    }
+    
+    .delivery-animation-container lottie-player {
+        height: 250px !important;
+    }
+    
+    .delivery-content .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .delivery-desc {
+        font-size: 0.9rem;
+        margin: 15px 0;
+    }
+    
+    .d-feat {
+        font-size: 0.8rem;
+    }
+}
+
+/* --- Mobile Specific Fixes --- */
+
+@media (max-width: 768px) {
+    
+    /* 1. Fix the Overlapping Logo Issue */
+    /* This pushes the delivery section down so the logo doesn't cover the text */
+    .delivery-section {
+        padding-top: 150px !important; 
+        padding-bottom: 50px !important;
+        text-align: center;
+    }
+
+    /* 2. Fix the WhatsApp Button Responsiveness */
+    .whatsapp-btn {
+        display: inline-flex !important;
+        width: 90% !important; /* Button takes 90% of screen width */
+        max-width: 350px; /* But doesn't get too giant */
+        justify-content: center;
+        padding: 12px 15px !important;
+        font-size: 0.9rem !important;
+        box-sizing: border-box; /* Ensures padding doesn't push the button out */
+        margin: 0 auto; /* Centers the button */
+    }
+
+    /* 3. Adjust Text and Headings for Mobile */
+    .delivery-content h2 {
+        font-size: 1.8rem !important; /* Smaller heading for mobile */
+        line-height: 1.2;
+        margin-top: 20px;
+    }
+
+    .delivery-desc {
+        font-size: 0.95rem !important;
+        padding: 0 15px; /* Adds space on sides of text */
+    }
+
+    /* 4. Fix Feature Items Grid */
+    .delivery-features {
+        display: flex !important;
+        flex-direction: column !important; /* Stack icons vertically on mobile */
+        align-items: center !important;
+        gap: 15px !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* 5. Adjust the Lottie Animation size for Mobile */
+    lottie-player {
+        height: 250px !important; /* Smaller animation on phone screens */
+    }
+}
+
+/* For very small phones (under 480px) */
+@media (max-width: 480px) {
+    .whatsapp-btn {
+        font-size: 0.8rem !important;
+        gap: 8px !important;
+    }
+    
+    .delivery-phone {
+        font-size: 1rem !important;
     }
 }

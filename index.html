@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -52,6 +52,7 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#menu" class="nav-link">Menu</a>
                 <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#delivery" class="nav-link">Delivery</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
 
@@ -87,7 +88,9 @@
                     <i class="typewriter-icon fas fa-utensils" id="typewriterIcon"></i>
                     <span id="typewriterText"></span>
                 </div>
-                <p class="hero-subtitle">Authentic Southern flavors delivered to your table</p>
+                <div class="hero-subtitle-frame">
+                    <p class="hero-subtitle">Authentic Southern flavors delivered to your table</p>
+                </div>
                 <div class="hero-buttons">
                     <a href="#menu" class="btn btn-primary ripple-btn">
                         <i class="fas fa-shopping-bag"></i> Order Now
@@ -225,6 +228,55 @@
             <!-- Menu Grid -->
             <div class="menu-grid" id="menuGrid">
                 <!-- Menu items injected via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section class="delivery-section section-padding">
+        <div class="container">
+            <div class="delivery-wrapper">
+                <!-- Animation Side -->
+                <div class="delivery-animation-container scroll-reveal">
+                    <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_m6cu98v2.json" 
+                        background="transparent" speed="1" style="width: 100%; height: 350px;" loop autoplay>
+                    </lottie-player>
+                </div>
+
+                <!-- Content Side -->
+                <div class="delivery-content scroll-reveal">
+                    <span class="section-tag">Express Service</span>
+                    <h2 class="section-title">Home Delivery</h2>
+                    <div class="section-line" style="margin: 0;"></div>
+                    <p class="delivery-desc">
+                        ඔබේ ප්‍රියතම දකුණේ රසය දැන් නිවසටම! අම්බලන්තොට නගරය අවට ඕනෑම තැනකට ඉතා ඉක්මනින්, ආරක්ෂිතව සහ උණුසුම්ව අපගේ බෙදාහැරීමේ සේවාව ක්‍රියාත්මකයි.
+                    </p>
+                    
+                    <div class="delivery-features">
+                        <div class="d-feat">
+                            <i class="fas fa-bolt"></i>
+                            <span>Super Fast Delivery</span>
+                        </div>
+                        <div class="d-feat">
+                            <i class="fas fa-box-open"></i>
+                            <span>Safe Packaging</span>
+                        </div>
+                        <div class="d-feat">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Ambalantota Area</span>
+                        </div>
+                    </div>
+
+                    <div class="delivery-cta">
+                        <a href="https://wa.me/94716000590?text=Hi%20Southern%20Restaurant,%20I%20would%20like%20to%20place%20an%20order.%20Please%20send%20me%20the%20details." 
+                           class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                        </a>
+                        <a href="tel:0716000590" class="delivery-phone">
+                            <i class="fas fa-phone-alt"></i> 0716 000 590
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -426,6 +478,7 @@
     </button>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
