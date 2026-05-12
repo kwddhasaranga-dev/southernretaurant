@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
         setTimeout(() => {
             loadingScreen.classList.add('hidden');
-        }, 500);
+        }, 1500);
     });
 
     // ==========================================
@@ -423,7 +423,7 @@ const galleryItems = [
                 
                 const icon = categoryIconMap[item.category] || 'fa-utensils';
                 const imageHtml = item.img ? 
-                    `<img src="${item.img}" alt="${item.name}" style="width:100%; height:100%; object-fit:cover;">` :
+                    `<img src="${item.img}" alt="${item.name}" loading="lazy" style="width:100%; height:100%; object-fit:cover;">` :
                     `<i class="fas ${icon}" style="font-size: 3rem; color: var(--gold);"></i>`;
                 
                 card.innerHTML = `

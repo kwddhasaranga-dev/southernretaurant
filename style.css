@@ -2509,12 +2509,16 @@ body:hover .cursor-glow {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 350px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .delivery-animation-container lottie-player {
-    height: 350px; /* Desktop height */
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
+    min-height: 320px;
+    height: 100%;
 }
 
 /* Responsive Design */
@@ -2553,27 +2557,40 @@ body:hover .cursor-glow {
 /* Delivery Responsive - Mobile */
 @media (max-width: 768px) {
     .delivery-wrapper {
+        grid-template-columns: 1fr;
         gap: 25px;
+        text-align: center;
+    }
+    
+    .delivery-content {
+        order: 2;
     }
     
     .delivery-animation-container {
-        margin-bottom: 10px;
+        order: 1;
+        margin: 0 auto 20px;
+        min-height: 260px;
+        max-width: 100%;
     }
     
     .delivery-animation-container lottie-player {
         width: 100% !important;
-        height: 250px !important; /* Mobile height */
+        max-width: 100%;
+        height: 260px !important; /* Mobile height */
+        min-height: 260px !important;
     }
     
     .delivery-desc {
         font-size: 1rem;
         margin: 20px 0;
+        padding: 0 15px;
     }
     
     .delivery-features {
         grid-template-columns: 1fr;
         gap: 12px;
         margin-bottom: 25px;
+        justify-items: center;
     }
     
     .delivery-cta {
@@ -2584,9 +2601,9 @@ body:hover .cursor-glow {
     
     .whatsapp-btn {
         width: 100%;
-        max-width: 300px;
-        padding: 16px 32px;
-        font-size: 1.1rem;
+        max-width: 360px;
+        padding: 16px 24px;
+        font-size: 1.05rem;
     }
     
     .delivery-phone {
@@ -2597,21 +2614,14 @@ body:hover .cursor-glow {
     
     .d-feat {
         justify-content: center;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
     
     .delivery-cta {
-        flex-direction: column;
-        gap: 12px;
         align-items: stretch;
     }
     
     .delivery-cta .btn {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .delivery-phone {
         width: 100%;
         justify-content: center;
     }
