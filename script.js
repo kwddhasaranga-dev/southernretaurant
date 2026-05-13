@@ -67,72 +67,72 @@ document.addEventListener('DOMContentLoaded', () => {
     // Menu Items - Comprehensive Restaurant Menu
     const menuItems = [
         // Rice & Curry - Authentic Sri Lankan
-        { id: 1, name: "Vegetable Rice & Curry", category: "rice-curry", price: "550", rating: 4, desc: "Traditionally spiced rice with 5 vegetable sides and authentic Sri Lankan curry.", img: "images/vegetable%20rice%20%26%20curry.jpg" },
-        { id: 2, name: "Egg Rice & Curry", category: "rice-curry", price: "600", rating: 4, desc: "Aromatic rice with fried eggs and savory curry gravy.", img: "images/egg%20rice%20%26%20curry.jpg" },
-        { id: 3, name: "Fish Rice & Curry", category: "rice-curry", price: "750", rating: 5, desc: "Fresh fish curry served with fragrant basmati rice.", img: "images/fish%20rice%20%26%20curry.jpg" },
-        { id: 4, name: "Chicken Rice & Curry", category: "rice-curry", price: "700", rating: 5, desc: "Tender chicken in spiced curry gravy with rice and vegetable sides.", img: "images/chicken%20rice%20%26%20curry.jpg" },
+        { id: 1, name: "Vegetable Rice & Curry", category: "rice-curry", price: "000", rating: 4, desc: "Traditionally spiced rice with 5 vegetable sides and authentic Sri Lankan curry.", img: "images/vegetable%20rice%20%26%20curry.jpg" },
+        { id: 2, name: "Egg Rice & Curry", category: "rice-curry", price: "000", rating: 4, desc: "Aromatic rice with fried eggs and savory curry gravy.", img: "images/egg%20rice%20%26%20curry.jpg" },
+        { id: 3, name: "Fish Rice & Curry", category: "rice-curry", price: "000", rating: 5, desc: "Fresh fish curry served with fragrant basmati rice.", img: "images/fish%20rice%20%26%20curry.jpg" },
+        { id: 4, name: "Chicken Rice & Curry", category: "rice-curry", price: "000", rating: 5, desc: "Tender chicken in spiced curry gravy with rice and vegetable sides.", img: "images/chicken%20rice%20%26%20curry.jpg" },
 
         // Fried Rice
-        { id: 5, name: "Vegetable Fried Rice", category: "fried-rice", price: "550", rating: 4, desc: "Stir-fried rice with colorful seasonal vegetables and aromatic spices.", img: "images/vegetable%20fried%20rice.jpg" },
-        { id: 6, name: "Egg Fried Rice", category: "fried-rice", price: "600", rating: 4, desc: "Classic fried rice with scrambled eggs and spring onions.", img: "images/egg%20fried%20rice.jpg" },
-        { id: 7, name: "Chicken Fried Rice", category: "fried-rice", price: "700", rating: 5, desc: "Tender chicken pieces stir-fried with rice and fresh vegetables.", img: "images/chicken%20fried%20rice.jpg" },
-        { id: 8, name: "Seafood Fried Rice", category: "fried-rice", price: "850", rating: 5, desc: "Premium fried rice with shrimp, squid, and fresh seafood.", img: "images/seafood%20fried%20rice.jpg" },
-        { id: 9, name: "Mixed Fried Rice", category: "fried-rice", price: "750", rating: 5, desc: "Combination of chicken, seafood, and vegetables with fried rice.", img: "images/mixed%20fried%20rice.jpg" },
+        { id: 5, name: "Vegetable Fried Rice", category: "fried-rice", price: "000", rating: 4, desc: "Stir-fried rice with colorful seasonal vegetables and aromatic spices.", img: "images/vegetable%20fried%20rice.jpg" },
+        { id: 6, name: "Egg Fried Rice", category: "fried-rice", price: "000", rating: 4, desc: "Classic fried rice with scrambled eggs and spring onions.", img: "images/egg%20fried%20rice.jpg" },
+        { id: 7, name: "Chicken Fried Rice", category: "fried-rice", price: "000", rating: 5, desc: "Tender chicken pieces stir-fried with rice and fresh vegetables.", img: "images/chicken%20fried%20rice.jpg" },
+        { id: 8, name: "Seafood Fried Rice", category: "fried-rice", price: "000", rating: 5, desc: "Premium fried rice with shrimp, squid, and fresh seafood.", img: "images/seafood%20fried%20rice.jpg" },
+        { id: 9, name: "Mixed Fried Rice", category: "fried-rice", price: "000", rating: 5, desc: "Combination of chicken, seafood, and vegetables with fried rice.", img: "images/mixed%20fried%20rice.jpg" },
 
         // Kottu
-        { id: 10, name: "Vegetable Kottu", category: "kottu", price: "550", rating: 4, desc: "Chopped roti stir-fried with fresh vegetables and aromatic spices.", img: "images/vegetable%20kottu.jpg" },
-        { id: 11, name: "Egg Kottu", category: "kottu", price: "600", rating: 4, desc: "Chopped roti with fried eggs and onions, served hot.", img: "images/egg%20kottu.jpg" },
-        { id: 12, name: "Chicken Kottu", category: "kottu", price: "750", rating: 5, desc: "Sri Lanka's favorite chopped roti with tender chicken pieces.", img: "images/chicken%20kottu.jpg" },
-        { id: 13, name: "Seafood Kottu", category: "kottu", price: "950", rating: 5, desc: "Premium kottu with fresh shrimp, squid, and fish.", img: "images/seafood%20kottu.jpg" },
-        { id: 14, name: "Mixed Kottu", category: "kottu", price: "850", rating: 5, desc: "Combination of chicken, seafood, and vegetables with chopped roti.", img: "images/mixed%20kottu.jpg" },
-        { id: 15, name: "Cheese Kottu", category: "kottu", price: "800", rating: 4, desc: "Chopped roti with melted cheese, chicken, and spiced vegetables.", img: "images/cheese%20kottu.jpg" },
+        { id: 10, name: "Vegetable Kottu", category: "kottu", price: "000", rating: 4, desc: "Chopped roti stir-fried with fresh vegetables and aromatic spices.", img: "images/vegetable%20kottu.jpg" },
+        { id: 11, name: "Egg Kottu", category: "kottu", price: "000", rating: 4, desc: "Chopped roti with fried eggs and onions, served hot.", img: "images/egg%20kottu.jpg" },
+        { id: 12, name: "Chicken Kottu", category: "kottu", price: "000", rating: 5, desc: "Sri Lanka's favorite chopped roti with tender chicken pieces.", img: "images/chicken%20kottu.jpg" },
+        { id: 13, name: "Seafood Kottu", category: "kottu", price: "000", rating: 5, desc: "Premium kottu with fresh shrimp, squid, and fish.", img: "images/seafood%20kottu.jpg" },
+        { id: 14, name: "Mixed Kottu", category: "kottu", price: "000", rating: 5, desc: "Combination of chicken, seafood, and vegetables with chopped roti.", img: "images/mixed%20kottu.jpg" },
+        { id: 15, name: "Cheese Kottu", category: "kottu", price: "000", rating: 4, desc: "Chopped roti with melted cheese, chicken, and spiced vegetables.", img: "images/cheese%20kottu.jpg" },
 
         // Noodles
-        { id: 16, name: "Vegetable Noodles", category: "noodles", price: "550", rating: 4, desc: "Stir-fried noodles with seasonal vegetables and aromatic sauce.", img: "images/vegetable noodles.jpg" },
-        { id: 17, name: "Egg Noodles", category: "noodles", price: "600", rating: 4, desc: "Soft noodles with fried eggs and spring onions.", img: "images/egg noodels.jpg" },
-        { id: 18, name: "Chicken Noodles", category: "noodles", price: "700", rating: 5, desc: "Tender chicken stir-fried with noodles and fresh vegetables.", img: "images/chiken noodels.jpg" },
-        { id: 19, name: "Seafood Noodles", category: "noodles", price: "850", rating: 5, desc: "Premium noodles with shrimp, squid, and fresh seafood.", img: "images/seafood noodles.jpg" },
-        { id: 20, name: "Mixed Noodles", category: "noodles", price: "750", rating: 5, desc: "Combination of chicken and seafood stir-fried with noodles.", img: "images/miixed noodels.jpg" },
+        { id: 16, name: "Vegetable Noodles", category: "noodles", price: "000", rating: 4, desc: "Stir-fried noodles with seasonal vegetables and aromatic sauce.", img: "images/vegetable noodles.jpg" },
+        { id: 17, name: "Egg Noodles", category: "noodles", price: "000", rating: 4, desc: "Soft noodles with fried eggs and spring onions.", img: "images/egg noodels.jpg" },
+        { id: 18, name: "Chicken Noodles", category: "noodles", price: "000", rating: 5, desc: "Tender chicken stir-fried with noodles and fresh vegetables.", img: "images/chiken noodels.jpg" },
+        { id: 19, name: "Seafood Noodles", category: "noodles", price: "000", rating: 5, desc: "Premium noodles with shrimp, squid, and fresh seafood.", img: "images/seafood noodles.jpg" },
+        { id: 20, name: "Mixed Noodles", category: "noodles", price: "000", rating: 5, desc: "Combination of chicken and seafood stir-fried with noodles.", img: "images/miixed noodels.jpg" },
 
         // Biryani
-        { id: 21, name: "Chicken Biryani", category: "biryani", price: "850", rating: 5, desc: "Fragrant basmati rice layered with tender spiced chicken and aromatics.", img: "images/chicken%20biryani.jpg" },
-        { id: 22, name: "Seafood Biryani", category: "biryani", price: "950", rating: 5, desc: "Premium biryani with shrimp, squid, and fresh seafood.", img: "images/chicken%20biryani.jpg" },
+        { id: 21, name: "Chicken Biryani", category: "biryani", price: "000", rating: 5, desc: "Fragrant basmati rice layered with tender spiced chicken and aromatics.", img: "images/chicken%20biryani.jpg" },
+        { id: 22, name: "Seafood Biryani", category: "biryani", price: "000", rating: 5, desc: "Premium biryani with shrimp, squid, and fresh seafood.", img: "images/chicken%20biryani.jpg" },
 
         // Nasigoreng
-        { id: 23, name: "Chicken Nasigoreng", category: "nasigoreng", price: "750", rating: 5, desc: "Indonesian-style fried rice with chicken and spiced tomato paste.", img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80" },
-        { id: 24, name: "Seafood Nasigoreng", category: "nasigoreng", price: "900", rating: 5, desc: "Premium nasigoreng with fresh shrimp, squid, and seafood.", img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80" },
-        { id: 25, name: "Mixed Nasigoreng", category: "nasigoreng", price: "850", rating: 5, desc: "Combination of chicken and seafood nasigoreng.", img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80" },
+        { id: 23, name: "Chicken Nasigoreng", category: "nasigoreng", price: "000", rating: 5, desc: "Indonesian-style fried rice with chicken and spiced tomato paste.", img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80" },
+        { id: 24, name: "Seafood Nasigoreng", category: "nasigoreng", price: "000", rating: 5, desc: "Premium nasigoreng with fresh shrimp, squid, and seafood.", img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80" },
+        { id: 25, name: "Mixed Nasigoreng", category: "nasigoreng", price: "000", rating: 5, desc: "Combination of chicken and seafood nasigoreng.", img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80" },
 
         // Devilled & Sides
-        { id: 26, name: "Devilled Chicken", category: "devilled", price: "750", rating: 5, desc: "Spicy devilled chicken pieces with crispy exterior.", img: "images/Devilled chicken.jpg" },
-        { id: 27, name: "Devilled Fish", category: "devilled", price: "800", rating: 5, desc: "Fresh fish prepared devilled style with spices.", img: "images/Devilled fish.jpg" },
-        { id: 28, name: "Devilled Cuttlefish", category: "devilled", price: "850", rating: 5, desc: "Tender cuttlefish with devilled spice coating.", img: "images/Devilled Cuttlefish.jpg" },
-        { id: 29, name: "Devilled Prawns", category: "devilled", price: "950", rating: 5, desc: "Large prawns prepared devilled with heat and flavor.", img: "images/Devilled Prawns.jpg" },
-        { id: 30, name: "Hot Butter Cuttlefish", category: "devilled", price: "900", rating: 5, desc: "Cuttlefish in creamy hot butter sauce with spices.", img: "images/Hot Butter Cuttlefish.jpg" },
+        { id: 26, name: "Devilled Chicken", category: "devilled", price: "000", rating: 5, desc: "Spicy devilled chicken pieces with crispy exterior.", img: "images/Devilled chicken.jpg" },
+        { id: 27, name: "Devilled Fish", category: "devilled", price: "000", rating: 5, desc: "Fresh fish prepared devilled style with spices.", img: "images/Devilled fish.jpg" },
+        { id: 28, name: "Devilled Cuttlefish", category: "devilled", price: "000", rating: 5, desc: "Tender cuttlefish with devilled spice coating.", img: "images/Devilled Cuttlefish.jpg" },
+        { id: 29, name: "Devilled Prawns", category: "devilled", price: "000", rating: 5, desc: "Large prawns prepared devilled with heat and flavor.", img: "images/Devilled Prawns.jpg" },
+        { id: 30, name: "Hot Butter Cuttlefish", category: "devilled", price: "000", rating: 5, desc: "Cuttlefish in creamy hot butter sauce with spices.", img: "images/Hot Butter Cuttlefish.jpg" },
 
         // Appetizers / Short Eats
-        { id: 35, name: "French Fries", category: "appetizers", price: "300", rating: 4, desc: "Golden crispy French fries with seasoning.", img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=800&q=80" },
-        { id: 36, name: "Fish Cutlets", category: "appetizers", price: "450", rating: 5, desc: "Crispy fish cutlets with breadcrumb coating.", img: "https://images.unsplash.com/photo-1514516882924-2a51a0f8c8df?auto=format&fit=crop&w=800&q=80" },
-        { id: 37, name: "Vegetable Spring Rolls", category: "appetizers", price: "400", rating: 4, desc: "Crispy spring rolls filled with fresh vegetables.", img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" },
+        { id: 35, name: "French Fries", category: "appetizers", price: "000", rating: 4, desc: "Golden crispy French fries with seasoning.", img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=800&q=80" },
+        { id: 36, name: "Fish Cutlets", category: "appetizers", price: "000", rating: 5, desc: "Crispy fish cutlets with breadcrumb coating.", img: "https://images.unsplash.com/photo-1514516882924-2a51a0f8c8df?auto=format&fit=crop&w=800&q=80" },
+        { id: 37, name: "Vegetable Spring Rolls", category: "appetizers", price: "000", rating: 4, desc: "Crispy spring rolls filled with fresh vegetables.", img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" },
 
         // Desserts
-        { id: 38, name: "Watalappan", category: "desserts", price: "350", rating: 5, desc: "Traditional Sri Lankan sweet pudding with jaggery.", img: "https://images.unsplash.com/photo-1512058564366-c9e1da9b9b88?auto=format&fit=crop&w=800&q=80" },
-        { id: 39, name: "Fruit Salad with Ice Cream", category: "desserts", price: "400", rating: 4, desc: "Fresh seasonal fruits with creamy ice cream.", img: "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80" },
-        { id: 40, name: "Curd & Honey", category: "desserts", price: "300", rating: 4, desc: "Creamy curd with aromatic honey drizzle.", img: "https://images.unsplash.com/photo-1505253216948-5d094abc6eb4?auto=format&fit=crop&w=800&q=80" },
+        { id: 38, name: "Watalappan", category: "desserts", price: "000", rating: 5, desc: "Traditional Sri Lankan sweet pudding with jaggery.", img: "https://images.unsplash.com/photo-1512058564366-c9e1da9b9b88?auto=format&fit=crop&w=800&q=80" },
+        { id: 39, name: "Fruit Salad with Ice Cream", category: "desserts", price: "000", rating: 4, desc: "Fresh seasonal fruits with creamy ice cream.", img: "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=80" },
+        { id: 40, name: "Curd & Honey", category: "desserts", price: "000", rating: 4, desc: "Creamy curd with aromatic honey drizzle.", img: "https://images.unsplash.com/photo-1505253216948-5d094abc6eb4?auto=format&fit=crop&w=800&q=80" },
 
         // Beverages
-        { id: 41, name: "Fresh Mango Juice", category: "beverages", price: "250", rating: 5, desc: "Freshly squeezed mango juice with natural sweetness.", img: "https://images.unsplash.com/photo-1551024736-9bccde9c2bd9?auto=format&fit=crop&w=800&q=80" },
-        { id: 42, name: "Fresh Papaya Juice", category: "beverages", price: "250", rating: 4, desc: "Fresh papaya juice with tropical flavor.", img: "https://images.unsplash.com/photo-1551024736-9bccde9c2bd9?auto=format&fit=crop&w=800&q=80" },
-        { id: 43, name: "Fresh Lime Juice", category: "beverages", price: "200", rating: 4, desc: "Refreshing fresh lime juice with minimal sugar.", img: "https://images.unsplash.com/photo-1510626176961-4b6a7dc1f7e4?auto=format&fit=crop&w=800&q=80" },
-        { id: 44, name: "Milkshakes", category: "beverages", price: "300", rating: 4, desc: "Creamy milkshakes in various flavors.", img: "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=800&q=80" },
-        { id: 45, name: "Tea/Coffee", category: "beverages", price: "150", rating: 4, desc: "Hot tea or coffee prepared the Sri Lankan way.", img: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80" },
-        { id: 46, name: "Soft Drinks", category: "beverages", price: "180", rating: 3, desc: "Selection of cold soft drinks and sodas.", img: "https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=800&q=80" }
+        { id: 41, name: "Fresh Mango Juice", category: "beverages", price: "000", rating: 5, desc: "Freshly squeezed mango juice with natural sweetness.", img: "https://images.unsplash.com/photo-1551024736-9bccde9c2bd9?auto=format&fit=crop&w=800&q=80" },
+        { id: 42, name: "Fresh Papaya Juice", category: "beverages", price: "000", rating: 4, desc: "Fresh papaya juice with tropical flavor.", img: "https://images.unsplash.com/photo-1551024736-9bccde9c2bd9?auto=format&fit=crop&w=800&q=80" },
+        { id: 43, name: "Fresh Lime Juice", category: "beverages", price: "000", rating: 4, desc: "Refreshing fresh lime juice with minimal sugar.", img: "https://images.unsplash.com/photo-1510626176961-4b6a7dc1f7e4?auto=format&fit=crop&w=800&q=80" },
+        { id: 44, name: "Milkshakes", category: "beverages", price: "000", rating: 4, desc: "Creamy milkshakes in various flavors.", img: "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=800&q=80" },
+        { id: 45, name: "Tea/Coffee", category: "beverages", price: "000", rating: 4, desc: "Hot tea or coffee prepared the Sri Lankan way.", img: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80" },
+        { id: 46, name: "Soft Drinks", category: "beverages", price: "000", rating: 3, desc: "Selection of cold soft drinks and sodas.", img: "https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=800&q=80" }
     ];
 
    const specialDishes = [
-    { name: "Chicken Biryani", desc: "Chef's special fragrant spiced rice.", price: "850", img: "images/chicken biryani.jpg" },
-    { name: "Special Seafood Kottu", desc: "Freshly made with morning catch.", price: "1100", img: "images/seafood kottu.jpg" },
-    { name: "Vegetable Noodles", desc: "Healthy and delicious garden fresh.", price: "550", img: "images/vegetable noodles.jpg" }
+    { name: "Chicken Biryani", desc: "Chef's special fragrant spiced rice.", price: "000", img: "images/chicken biryani.jpg" },
+    { name: "Special Seafood Kottu", desc: "Freshly made with morning catch.", price: "000", img: "images/seafood kottu.jpg" },
+    { name: "Vegetable Noodles", desc: "Healthy and delicious garden fresh.", price: "000", img: "images/vegetable noodles.jpg" }
 ];
 
 const galleryItems = [
